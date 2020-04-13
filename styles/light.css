@@ -1,0 +1,110 @@
+/* reset */
+*,
+*::before,
+*::after{box-sizing:border-box;}
+/* a{text-decoration:none; color:inherit; cursor:pointer;} */
+body { background: #fafafa; height: 100vh; margin: 0 auto; overscroll-behavior: none; width: 100%;}
+/* button{background-color:transparent; color:inherit; border:none; outline:none; border-width:0; padding:0; cursor:pointer;} */
+figure{margin:0;}
+input::-moz-focus-inner {border:0; padding:0; margin:0;}
+ul, ol, dd{margin:0; padding:0; list-style:none;}
+h1, h2, h3, h4, h5, h6{margin:0; font-size:inherit; font-weight:inherit;}
+p{margin:0;}
+cite {font-style:normal;}
+fieldset, iframe {border-width:0; padding:0; margin:0;}
+
+/* Typo */
+
+/* Colores */
+
+/* Base */
+
+body {
+    background: #FFF4FD;
+    color: #110038;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+/* Header y nav */
+
+header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    background: #110038;
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    padding: 0.2rem;
+    padding-left: 0.4rem;
+    width: 100%;
+    color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding-top: 3.5rem;
+    padding-left: 12%;
+    padding-right: 12%;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 6rem;
+}
+img {
+    max-width: 100%;
+}
+
+/* Búsqueda */
+
+section {
+    margin: 2rem;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+.buscar {
+    display: block;
+    background: #B4B4B4;
+}
+
+.buscar-wrap {
+    
+    padding: 0.4rem;
+}
+
+.busqueda input {
+    height: 2rem;
+    width: 90%;    
+}
+
+.busqueda input::placeholder {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 16px;
+    padding: 0.6rem;    
+    color: #B4B4B4;
+}
+
+.busqueda label {
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    display: block;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0.2rem;
+
+}
+
+/* Sugerencias */
+
+.head-wrap {
+    display: flex;
+    align-items: center;
+    background: white;
+    font-size: 14px;
+    height: 2rem;
+    padding: 0.2rem;
+}
+
+
+/* Tendencias */
