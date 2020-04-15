@@ -16,3 +16,4 @@ function giphyTrend(keyword) {
 };
 
 giphyTrend();
+ 
