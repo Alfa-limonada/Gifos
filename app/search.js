@@ -1,39 +1,37 @@
-/* Conectarse con la api de giphy, y tomar 4 sugerencias, 
-generar el html dinámico y mostrarlas en 4 cajas con un botón de "ver más"
-que va la caja de búsqueda */
+/*Buscar en la api a partir de un string del usuario*/
 
-/*
-Info
-public key: dc6zaTOxFJmzC
-Host: api.giphy.com
-Search: api.giphy.com/v1/gifs/search
-*/
+const APIKEY = "DhEvyTwp8swMj1cYtO5Bgno6W8cKXuc5";
+const giphyUrl = "http://api.giphy.com/v1/gifs/";
+const searchUrl = giphyUrl + "search?api_key=" + APIKEY + "&q=" + keyword + "&limit=4"; //endpoint para search
 
-const APIKEY = "dc6zaTOxFJmzC";
-// document.addEventListener("DOMContentLoaded", giphySearch); //fires when the initial HTML document has been completely loaded and parsed
 
-function getKeyword() {
-  let keyword = document.getElementById("keyword").value.trim(); // get input from search erase spaces
+function searchKeyword() {  
+  const keyword = document.getElementById("keyword").value.trim(); //toma el keyword del imput
   alert(keyword);
-  giphySearch(keyword); //keyword le pasa el parámetro
+  fetchApi(keyword);
   return;
 }
 
-function giphySearch(keyword) {
-  let found = fetch(
-    "http://api.giphy.com/v1/gifs/search?q=" +
-      keyword +
-      "&api_key=" +
-      APIKEY +
-      "&limit=4"
-  )
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
-      return data;
-    })
-    .catch(error => {
-      return error;
-    });
-  return found;
-};
+async function fetchApi(keyword) {
+  console.log(searchUrl);  
+  try {
+    let response = await fetch(searchUrl); //pide datos de api
+    let data = await response.json(); //extrae los datos de la respuesta http
+    return console.log(data); //return data; cambiar luego
+  } catch (error) {
+    console.error(error);
+    alert("Ups! vuelve a intentar");
+  }
+}
+
+// fetchApi();
+
+// function fetchApi() {
+//   return fetch(searchUrl) //Poner el endpoint necesario
+//     .then(response => response.json())
+//     .then(data => console.log(data))
+//     .catch(error => { // Si fracasa el Fetch por conexión
+//       console.error(error);
+//       alert("Ups! vuelve a intentar");
+//     });
+// };
