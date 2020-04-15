@@ -2,18 +2,17 @@
 
 const APIKEY = "DhEvyTwp8swMj1cYtO5Bgno6W8cKXuc5";
 const giphyUrl = "http://api.giphy.com/v1/gifs/";
-const searchUrl = giphyUrl + "search?api_key=" + APIKEY + "&q=" + keyword + "&limit=4"; //endpoint para search
 
 
 function searchKeyword() {  
-  const keyword = document.getElementById("keyword").value.trim(); //toma el keyword del imput
-  alert(keyword);
-  fetchApi(keyword);
+  let keyword = document.getElementById("keyword").value.trim(); //toma el keyword del imput
+  let searchUrl = giphyUrl + "search?api_key=" + APIKEY + "&q=" + keyword + "&limit=4"; //endpoint para search
+  alert(searchUrl);
+  fetchApi(searchUrl);
   return;
 }
 
-async function fetchApi(keyword) {
-  console.log(searchUrl);  
+async function fetchApi(searchUrl) { 
   try {
     let response = await fetch(searchUrl); //pide datos de api
     let data = await response.json(); //extrae los datos de la respuesta http
@@ -35,3 +34,23 @@ async function fetchApi(keyword) {
 //       alert("Ups! vuelve a intentar");
 //     });
 // };
+
+
+// function searchKeyword() { 
+//   const keyword = document.getElementById("keyword").value.trim(); //toma el keyword del imput 
+//   alert(keyword);
+//   fetchApi(keyword);
+//   return;
+// }
+
+// async function fetchApi(keyword) { 
+//   let searchUrl = giphyUrl + "search?api_key=" + APIKEY + "&q=" + keyword + "&limit=12";   //endpoint para search
+//   try {
+//     let response = await fetch(searchUrl); //pide datos de api
+//     let data = await response.json(); //extrae los datos de la respuesta http
+//     return console.log(data); //return data; cambiar luego
+//   } catch (error) {
+//     console.error(error);
+//     alert("Ups! vuelve a intentar");
+//   }
+// }
