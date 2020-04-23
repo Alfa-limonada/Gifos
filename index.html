@@ -38,10 +38,10 @@
       </div>
     </nav>
 
-    <section class="busqueda">
-      <form method="get" class="buscar">
+    <section class="search">
+      <form method="get" class="search-form">
         <label for="keyword">Buscar:</label>
-        <div class="buscar-wrap">
+        <div class="search-wrap">
           <input
             type="text"
             id="keyword"            
@@ -50,21 +50,21 @@
           <button type="button" onclick="searchKeyword();">Enviar</button>
         </div>
       </form>
-      <div class="resultados"></div>
+      <div class="res-wrap"></div>
     </section>
 
-    <section class="sugerencias">
+    <section class="suggestion">
       <div class="head-wrap"><h2>Hoy te sugerimos:</h2></div>
-      <div class="div-sugeridos"></div>
+      <div class="sugg-wrap" id="suggestionWrap"></div>
     </section>
 
-    <section class="tendencias">
+    <section class="trending">
       <div class="head-wrap"><h2>Tendencias:</h2></div>
-      <div class="div-tendencias"></div>
+      <div class="trend-wrap"></div>
     </section>
 
     <script src="app/search.js"></script>
-    <script src="app/trending.js"></script>
-    <script src="app/suggestion.js"></script>   
+    <script src="app/suggestion.js"></script>
+    <script src="app/trending.js"></script>       
   </body>
 </html>

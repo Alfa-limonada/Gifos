@@ -8,7 +8,7 @@ const GYPHY_BASE_URL = "http://api.giphy.com/v1/gifs/"; // por buenas prácticas
 async function searchKeyword() {  
   let keyword = document.getElementById("keyword").value.trim(); //toma el keyword del imput
   let searchUrl = GYPHY_BASE_URL + "search?api_key=" + APIKEY + "&q=" + keyword + "&limit=4"; //endpoint para search
-  alert(searchUrl);
+  // alert(searchUrl);
   return await fetchApi(searchUrl); // consumo el api, espero la respuesta (gracias al await) y la retorno.
 }
 
@@ -16,9 +16,9 @@ async function fetchApi(searchUrl) {
   try {
     let response = await fetch(searchUrl); //pide datos de api
     let data = await response.json(); //extrae los datos de la respuesta http
-    if (response.ok) {
-      // valida que la respuesta del servidor sea ok (status 200)
-      return data;
+    if (response.ok) {// valida que la respuesta del servidor sea ok (status 200)
+      console.log(data);
+      content = data;                  
     }
     return null; // sirve para determinar que el fetch no se realizó correctamente
   } catch (error) {
