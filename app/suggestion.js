@@ -7,28 +7,30 @@ let randomUrl =
   GYPHY_BASE_URL + "search?api_key=" + APIKEY + "&q=" + "evil cat" + "&limit=4";
 let content = {};
 
+
 async function searchSuggestion() {
   await fetchApi(randomUrl); //espera la respuesta del Fetch
-  appendSuggestion(); // imprime el resultado al DOM
+  appendSuggestion(content);  
 }
 
-function appendSuggestion() {
-  let suggWrap = document.querySelector("#suggestionWrap");
-
+function appendSuggestion(content) {
+  let i = 0
+  while (i < content.data.length) {
+      let suggWrap = document.querySelector("#suggestionWrap");
   //Elementos
   let fig = document.createElement("figure");
   let img = document.createElement("img");
   let figcap = document.createElement("figcaption");
-
   //Append img - figcap to fig
   fig.appendChild(img);
   fig.appendChild(figcap);
   fig.classList.add("sugg-fig");
-
   //Atributos
-  img.src = content.data[0].images.downsized.url;
-  figcap.textContent = content.data[0].title;
-
+  img.src = content.data[i].images.fixed_height.url;
+  figcap.textContent = content.data[i].title;
   //Append fig to DOM
   suggWrap.appendChild(fig);
+  i++
+  }
 }
+
