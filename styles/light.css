@@ -116,3 +116,10 @@ section {
     display: flex;     
     flex-wrap: wrap;
 }
+
+/* Búsqueda */
+
+.search-wrap {
+    display: flex;     
+    flex-wrap: wrap;
+}

@@ -41,16 +41,16 @@
     <section class="search">
       <form method="get" class="search-form">
         <label for="keyword">Buscar:</label>
-        <div class="search-wrap">
+        <div class="form-wrap">
           <input
             type="text"
             id="keyword"            
             placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"
           />
-          <button type="button" onclick="searchKeyword();">Enviar</button>
+          <button type="button" id="search-button">Enviar</button>
         </div>
       </form>
-      <div class="res-wrap"></div>
+      <div class="search-wrap" id="searchWrap"></div>
     </section>
 
     <section class="suggestion">
