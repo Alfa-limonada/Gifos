@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", searchSuggestion);
 
 let randomUrl =
   GYPHY_BASE_URL + "search?api_key=" + APIKEY + "&q=" + "evil cat" + "&limit=4";
-let wrap = document.querySelector("#suggestionWrap");
+let suggestionWrap = document.querySelector("#suggestionWrap");
 
 
 async function searchSuggestion() {
   await fetchApi(randomUrl); //espera la respuesta del Fetch  
-  append(content, wrap);  
+  append(content, suggestionWrap);  
 }
 
 

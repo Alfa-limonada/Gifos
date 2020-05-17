@@ -1,5 +1,5 @@
 
-function append(content) {
+function append(content, wrap) {
     let i = 0
     while (i < content.data.length) {        
     //Elementos
@@ -14,7 +14,8 @@ function append(content) {
     img.src = content.data[i].images.fixed_height.url;
     figcap.textContent = content.data[i].title;
     //Append fig to DOM
-    wrap.appendChild(fig);
+    wrap.insertAdjacentElement("afterbegin", fig);
+    // wrap.appendChild(fig); La diferencia es si se pegan al ppio o al final
     i++
     }
   }
