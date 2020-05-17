@@ -25,7 +25,7 @@ async function searchKeyword() {
 function appendSearch(content) {
   let i = 0;
   while (i < content.data.length) {
-    let suggWrap = document.querySelector("#searchWrap");
+    let searchWrap = document.querySelector("#searchWrap");
     //Elementos
     let fig = document.createElement("figure");
     let img = document.createElement("img");
