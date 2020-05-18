@@ -17,3 +17,5 @@ async function fetchApi(searchUrl) {
       return null; // sirve para determinar que el fetch no se realizó correctamente
     }
   }
+
+  

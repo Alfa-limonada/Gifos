@@ -4,10 +4,8 @@ que va la caja de búsqueda */
 
 document.addEventListener("DOMContentLoaded", searchSuggestion);
 
-let randomUrl =
-  GYPHY_BASE_URL + "search?api_key=" + APIKEY + "&q=" + "evil cat" + "&limit=4";
+let randomUrl = `${GYPHY_BASE_URL}search?api_key=${APIKEY}&q=evil+cat&limit=4`;
 let suggestionWrap = document.querySelector("#suggestionWrap");
-
 
 async function searchSuggestion() {
   await fetchApi(randomUrl); //espera la respuesta del Fetch  
