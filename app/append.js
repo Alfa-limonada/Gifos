@@ -1,6 +1,6 @@
 
 function append(content, wrap) {
-    let i = 0
+    let i = 0;
     while (i < content.data.length) {        
     //Elementos
     let fig = document.createElement("figure");
@@ -19,3 +19,5 @@ function append(content, wrap) {
     i++
     }
   }
+
+ 
