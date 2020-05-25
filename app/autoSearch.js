@@ -1,3 +1,6 @@
+/* Por mejorar: hacer que se pueda bajar a cada autoCompleteLi con el mouse o teclado y 
+al presionar accionar link de búsqueda */
+
 //Crea listener cuando se presiona una tecla
 window.onkeyup = autoComplete;
 
