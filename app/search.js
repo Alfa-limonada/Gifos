@@ -2,9 +2,10 @@
 document.getElementById("search-button").addEventListener("click", searchKeyword);
 
 document.getElementById("keyword").addEventListener("keydown", function(ev) {
-  if (event.keyCode === 13) {
+  if (ev.keyCode === 13) {
     ev.preventDefault();
-    document.getElementById("search-button").click();
+    searchKeyword();
+    setTimeout(eraseAutoComplete, 500)
   }
 });
 

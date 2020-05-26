@@ -16,21 +16,18 @@ let autoCompleteLi = [];
 async function autoComplete(ev) {
     searchTextValue = ev.target.value.trim();
     autoCompleteUrl = `${GYPHY_BASE_URL}search/tags?api_key=${APIKEY}&q=${searchTextValue}&limit=3`;
-    autoCompleteLi = document.querySelectorAll('.auto-li');    
-    // console.log(searchTextValue);
-    // console.log(autoCompleteUrl);
+    autoCompleteLi = document.querySelectorAll('.auto-li');  
+    let autoWrap = document.querySelector("#autoWrap");  
 
-    if (searchTextValue.length >= 2 && autoCompleteLi.length === 0) {
+    if (searchTextValue.length > 2) {        
         await fetchApi(autoCompleteUrl);
-        appendAutoComplete(content, autoWrap);
-    } else if (searchTextValue.length > 3) { 
-        await fetchApi(autoCompleteUrl);
-        updateAutoComplete(content)
-    }    
+        appendAutoComplete(content, autoWrap);        
+    }  
 }
 
 function appendAutoComplete(content, wrap) {
-    let i = 0;
+    eraseAutoComplete()
+    let i = 0;    
     autoCompleteLi = document.querySelectorAll('.auto-li');
     while (i < content.data.length) {
         //Elementos
@@ -40,15 +37,6 @@ function appendAutoComplete(content, wrap) {
         li.textContent = content.data[i].name;
         //Append li to DOM
         wrap.appendChild(li);
-        i++;
-    }
-}
-
-function updateAutoComplete(content) {
-    let i = 0;
-    autoCompleteLi = document.querySelectorAll('.auto-li');
-    while (i < content.data.length) {        
-        autoCompleteLi[i].innerText = content.data[i].name;
         i++;
     }
 }

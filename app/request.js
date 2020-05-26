@@ -7,7 +7,7 @@ async function fetchApi(searchUrl) {
       let response = await fetch(searchUrl); //pide datos de api
       let data = await response.json(); //extrae los datos de la respuesta http
       if (response.ok) {// valida que la respuesta del servidor sea ok (status 200)
-        console.log(data);
+        // console.log(data);
         content = data;                  
       }
       return null; // sirve para determinar que el fetch no se realizó correctamente
