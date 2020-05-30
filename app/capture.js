@@ -44,7 +44,7 @@ function getStream() {
         mediaRecorder.stop();
         console.log(mediaRecorder.state);
         //apaga la cámara
-        mediaStreamObj.getTracks()[0].stop();
+        // mediaStreamObj.getTracks()[0].stop(); 
       });
 
       //Guardar en array mientas hay data disponible:

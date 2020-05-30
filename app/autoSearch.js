@@ -16,7 +16,6 @@ let autoCompleteLi = [];
 async function autoComplete(ev) {
     searchTextValue = ev.target.value.trim();
     autoCompleteUrl = `${GYPHY_BASE_URL}search/tags?api_key=${APIKEY}&q=${searchTextValue}&limit=3`;
-    autoCompleteLi = document.querySelectorAll('.auto-li');  
     let autoWrap = document.querySelector("#autoWrap");  
 
     if (searchTextValue.length > 2) {        
