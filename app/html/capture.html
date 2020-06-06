@@ -16,8 +16,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../../styles/light.css" />
-
-    
   </head>
 
   <body>
@@ -29,30 +27,26 @@
     </header>
 
     <nav>
-        <div class="logo">
-          <img src="/../assets/logo-light.png" alt="Logo Gifos" />
-        </div>
-        <div class="menu">
-          <button>Crear Guifos</button>
-          <button>Elegir tema</button><button>&#9662;</button>
-          <a href="/app/html/capture.html">Mis Guifos</a>
-  
-        </div>
-      </nav>
+      <div class="logo">
+        <img src="/../assets/logo-light.png" alt="Logo Gifos" />
+      </div>
+      <div class="menu">
+        <button>Crear Guifos</button>
+        <button>Elegir tema</button><button>&#9662;</button>
+        <a href="/app/html/capture.html">Mis Guifos</a>
+      </div>
+    </nav>
 
     <section>
+      <div>
+        <button id="btnCapturar">CAPTURAR</button><br />
+        <button id="btnListo">LISTO</button>
+      </div>
 
-      <div><button id="btnCapturar">CAPTURAR</button><br/>
-        <button id="btnListo">LISTO</button></div>
-
-      
-
-      <video id="videoStream"controls></video>
+      <video id="videoStream" controls></video>
       <video id="videoSave" controls></video>
-
-
     </section>
-    
+
     <script src="/app/capture.js"></script>
   </body>
 </html>
