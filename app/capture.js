@@ -61,3 +61,5 @@ async function stopStream() {
     myGifOs.push(ev.data);
   };
 }
+
+//cómo se para o se resetea el timer del videostream?

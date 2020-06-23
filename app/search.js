@@ -1,6 +1,7 @@
 // Event listener
 document.getElementById("search-button").addEventListener("click", searchKeyword);
 
+// Diferencia entre keydown, keyup, keypress
 document.getElementById("keyword").addEventListener("keydown", function(ev) {
   if (ev.keyCode === 13) {
     ev.preventDefault();
